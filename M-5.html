@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      #profile-container {
+        text-align: center;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 800px; /* Melebarkan container */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #profile-image {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 5px solid #3498db;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2,
+      h3,
+      p {
+        color: #333;
+        margin: 10px 0;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        color: #555;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      .skills-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .skills-container div {
+        width: 48%;
+      }
+
+      form {
+        margin: 0 25%;
+        margin-top: 30px;
+        width: 100%; /* Melebarkan form */
+        max-width: 400px; /* Batasi lebar form */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #555;
+        color: #fff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      #contact-box {
+        background-color: #3498db;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="profile-container">
+      <img id="profile-image" src="profil.png" alt="Gambar Profil" />
+      <h2>Nama Mahasiswa</h2>
+      <p>NPM: 123456789</p>
+      <p>Deskripsi Diri: Mahasiswa pemrograman dengan minat pada pengembangan web.</p>
+
+      <div class="skills-container">
+        <div>
+          <h3>Hard Skill</h3>
+          <table>
+            <tr>
+              <td>HTML</td>
+              <td>Deskripsi HTML</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>Deskripsi CSS</td>
+            </tr>
+            <!-- Tambahkan baris sesuai kebutuhan -->
+          </table>
+        </div>
+
+        <div>
+          <h3>Soft Skill</h3>
+          <table>
+            <tr>
+              <td>Kreativitas</td>
+              <td>Deskripsi Kreativitas</td>
+            </tr>
+            <tr>
+              <td>Kerjasama Tim</td>
+              <td>Deskripsi Kerjasama Tim</td>
+            </tr>
+            <!-- Tambahkan baris sesuai kebutuhan -->
+          </table>
+        </div>
+      </div>
+
+      <div id="contact-box">
+        <h3>Hubungi Saya</h3>
+        <p>Jika Anda memiliki pertanyaan atau ingin berkomunikasi lebih lanjut, silakan hubungi saya melalui email atau formulir kontak di bawah.</p>
+        <form id="contact-form" onsubmit="submitForm()">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Pesan:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function submitForm() {
+        alert("Terima kasih sudah mengontak saya!");
+      }
+    </script>
+  </body>
+</html>
