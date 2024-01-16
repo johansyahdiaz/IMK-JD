@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan HTML & CSS</title>
+    <style>
+      /* isi style Disini */
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("feedback-form").addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Terima kasih atas pesanan Anda!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Form Pemesanan</h1>
+    </header>
+
+    <section id="content">
+      <div id="image-section">
+        <img src="pesan_makan.jpg" alt="Contoh Gambar" />
+      </div>
+
+      <div id="table-section">
+        <h2>Data Produk</h2>
+        <table>
+          <tr>
+            <th>Nama Produk</th>
+            <th>Harga</th>
+            <th>Stok</th>
+          </tr>
+          <tr>
+            <td>Produk A</td>
+            <td>$20</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Produk B</td>
+            <td>$30</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Produk C</td>
+            <td>$25</td>
+            <td>40</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="form-section">
+        <h2>Hubungi Kami</h2>
+        <form id="feedback-form">
+          <div>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
